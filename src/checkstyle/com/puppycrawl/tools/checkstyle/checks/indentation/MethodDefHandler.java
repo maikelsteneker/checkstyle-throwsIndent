@@ -76,6 +76,8 @@ public class MethodDefHandler extends BlockParentHandler
         final int columnNo = expandedTabsColumnNo(throwsAst);
         final IndentLevel expectedColumnNo =
             new IndentLevel(getLevel(), getBasicOffset());
+        expectedColumnNo.addAcceptedIndent(
+                new IndentLevel(getLevel(), 2 * getBasicOffset()));
 
         if (startsLine(throwsAst)
             && !expectedColumnNo.accept(columnNo))
