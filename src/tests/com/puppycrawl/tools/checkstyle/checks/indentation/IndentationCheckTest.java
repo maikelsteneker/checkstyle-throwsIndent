@@ -25,7 +25,7 @@ import org.junit.Test;
 
 /**
  *
- * @author  jrichard, Maikel Steneker
+ * @author  jrichard
  */
 public class IndentationCheckTest extends BaseCheckTestSupport
 {
@@ -130,7 +130,7 @@ public class IndentationCheckTest extends BaseCheckTestSupport
             "139: method call child at indentation level 10 not at correct indentation, 12",
             "142: method call child at indentation level 10 not at correct indentation, 12",
             "152: method call child at indentation level 6 not at correct indentation, 12",
-            "158: method def throws at indentation level 6 not at correct indentation, [8, 12]",
+            "158: method def throws at indentation level 6 not at correct indentation, 8",
             "164: method def child at indentation level 4 not at correct indentation, 8",
             "169: method def child at indentation level 4 not at correct indentation, 8",
             "173: method def return type at indentation level 0 not at correct indentation, 4",

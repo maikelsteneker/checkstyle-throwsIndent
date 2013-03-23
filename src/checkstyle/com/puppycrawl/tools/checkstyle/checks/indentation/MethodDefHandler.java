@@ -24,7 +24,8 @@ import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 /**
  * Handler for method definitions.
  *
- * @author jrichard, Maikel Steneker
+ * @author jrichard
+ * @author Maikel Steneker
  */
 public class MethodDefHandler extends BlockParentHandler
 {
@@ -75,9 +76,7 @@ public class MethodDefHandler extends BlockParentHandler
 
         final int columnNo = expandedTabsColumnNo(throwsAst);
         final IndentLevel expectedColumnNo =
-            new IndentLevel(getLevel(), getBasicOffset());
-        expectedColumnNo.addAcceptedIndent(
-                new IndentLevel(getLevel(), 2 * getBasicOffset()));
+            new IndentLevel(getLevel(), getIndentCheck().getThrowsIndent());
 
         if (startsLine(throwsAst)
             && !expectedColumnNo.accept(columnNo))
